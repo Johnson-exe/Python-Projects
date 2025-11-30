@@ -1,8 +1,7 @@
 from datetime import datetime
 
 class Library:
-    def __init__(self):
-        # Pre-loaded books with full details
+    def __init__(self): # Presaved Books
         self.inventory = {
             "9780747573609": {
                 "title": "Harry Potter and the Philosopher's Stone",
@@ -62,7 +61,7 @@ class Library:
             }
         }
 
-    def book_add(self):
+    def book_add(self): # Add a Book
         print("\n--- ADD A BOOK ---")
         isbn = input("Enter ISBN (must be 13 digits): ").strip()
         title = input("Enter the title of the book: ").strip()
@@ -94,7 +93,7 @@ class Library:
         print(f"✅ Book '{title}' by {author} has been added.\n")
         return True
 
-    def edit_book(self):
+    def edit_book(self): # Edit Book
         if not self.inventory:
             print("📭 No books to edit!\n")
             return
@@ -175,7 +174,7 @@ class Library:
         else:
             print("❌ Edit cancelled.\n")
 
-    def delete_book(self):
+    def delete_book(self): #Delete
         if not self.inventory:
             print("📭 No books to delete!\n")
             return
@@ -193,7 +192,7 @@ class Library:
         else:
             print("❌ Book not found!\n")
 
-    def list_books(self):
+    def list_books(self): # List all Books
         if not self.inventory:
             print("📭 Inventory is empty.\n")
             return
