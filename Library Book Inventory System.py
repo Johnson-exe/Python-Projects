@@ -234,7 +234,7 @@ class Library:
             else:
                 print("❌ No matching books found.\n")
 
-
+#main
 def main():
     print("\n=== Stitches Library Book Inventory System ===")
     print("1. 📚 Add a book to the inventory")
